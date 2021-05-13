@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- <include file="$(find pkg)/launch/world.launch" /> -->
+
+    <arg name="goals" default="$(env GOALS)" />
+    <node pkg="pkg" name="main" type="lab3A.py" output="screen" args="$(arg goals)" />
+    
+    <node pkg="pkg" name="move" type="lab3A_move.py" output="screen" />
+</launch>

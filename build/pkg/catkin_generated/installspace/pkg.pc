@@ -1,0 +1,8 @@
+prefix=/home/mallab/ws/install
+
+Name: pkg
+Description: Description of pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: message_runtime actionlib_msgs cv_bridge geometry_msgs image_transport message_generation nav_msgs roscpp rospy sensor_msgs std_msgs tf

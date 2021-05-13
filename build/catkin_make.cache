@@ -1,0 +1,2 @@
+pkg
+-DCATKIN_DEVEL_PREFIX=/home/mallab/ws/devel -DCMAKE_INSTALL_PREFIX=/home/mallab/ws/install -G Unix Makefiles

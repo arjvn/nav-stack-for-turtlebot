@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find pkg)/launch/world.launch" />
+    <arg name="goals" default="$(env GOALS)" />
+    <arg name="start_pos" default="$(env X_POS),$(env Y_POS)" />
+    <arg name="cell_size" default="$(env CELL_SIZE)" />
+    <arg name="min_pos" default="$(env MIN_POS)" />
+    <arg name="max_pos" default="$(env MAX_POS)" />
+    <node pkg="pkg" name="main" type="lab2_2.py" output="screen" args="$(arg goals) $(arg cell_size) $(arg min_pos) $(arg max_pos)  $(arg start_pos)" />
+    
+    <node pkg="pkg" name="move" type="lab3_move.py" output="screen" args="$(arg start_pos)"/>
+</launch>
